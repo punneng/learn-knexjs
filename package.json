@@ -1,0 +1,36 @@
+{
+  "name": "learn-knexjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punneng/learn-knexjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/punneng/learn-knexjs/issues"
+  },
+  "homepage": "https://github.com/punneng/learn-knexjs#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.3",
+    "joi": "^10.2.0",
+    "knex": "^0.12.6",
+    "lodash": "^4.16.4",
+    "moment": "^2.17.1",
+    "pg": "^6.1.2",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "sinon": "^1.17.3",
+    "mocha": "^3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
