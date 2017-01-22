@@ -6,10 +6,10 @@ describe('StockIndex', () => {
   beforeEach(() => {
     testHelper.clearDB()
   })
-  describe('#create', () => {
+  describe('#createAsync', () => {
     describe('executes successfully', () => {
       it('should returns an object of id, index, value, changeNet and changeNetPercent', () => {
-        return StockIndex.create({
+        return StockIndex.createAsync({
           index: 'Nasdaq',
           value: 10.00,
           changeNet: 2.00,
@@ -26,7 +26,7 @@ describe('StockIndex', () => {
 
     describe('executes unsuccessfully', () => {
       it('should raise an exception with error message', () => {
-        return StockIndex.create({
+        return StockIndex.createAsync({
           value: 10.00,
           changeNet: 2.00,
           changeNetPercent: 0.10

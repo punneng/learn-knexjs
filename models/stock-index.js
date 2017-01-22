@@ -21,7 +21,7 @@ function validate (data, schema) {
 }
 
 module.exports = {
-  create: (data) => {
+  createAsync: (data) => {
     const validatedData = validate(data, Joi.object().keys({
       index: Joi.string().required(),
       value: Joi.number().required(),
