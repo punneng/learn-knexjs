@@ -26,7 +26,7 @@ describe('ScraperService', () => {
       })
       it('should be able to connect to http://www.nasdaq.com/', () => {
         return ScraperService.scrape()
-        .then(() => {
+        .then((res) => {
           assert(requestStub.calledOnce)
         })
       })
@@ -56,10 +56,10 @@ describe('ScraperService', () => {
         )
       })
 
-      it('should raise TypeError exception', () => {
+      it('should raise NotFound exception', () => {
         return ScraperService.scrape()
         .catch(e => {
-          assert.equal(e.name, 'TypeError')
+          assert.equal(e.message, 'NotFound')
         })
       })
     })
