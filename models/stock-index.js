@@ -2,6 +2,7 @@ const P   = require('bluebird')
 const Joi = require('joi')
 const knex = require('../lib/knex')
 const TABLE = 'stock_indexes'
+const LIMIT = 20
 
 
 // TODO: decouple to data/utils
@@ -35,5 +36,11 @@ module.exports = {
     .then(stockIndexes => {
       return stockIndexes[0]
     })
+  },
+  findAsync: () => {
+    return knex.select('index', 'value', 'changeNet', 'createdAt', 'updatedAt')
+               .from(TABLE)
+               .limit(LIMIT)
+               .orderBy('createdAt', 'desc')
   }
 }
