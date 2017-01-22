@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest",
+    "migrate:test": "NODE_ENV=test knex migrate:latest --env test",
+    "migrate:production": "NODE_ENV=production knex migrate:latest --env production"
   },
   "repository": {
     "type": "git",
