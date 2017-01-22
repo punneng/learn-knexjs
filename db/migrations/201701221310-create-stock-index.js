@@ -6,7 +6,8 @@ exports.up = function(knex, Promise) {
       table.decimal('value').notNull()
       table.decimal('changeNet').notNull()
       table.decimal('changeNetPercent').notNull()
-      table.timestamps()
+      table.timestamp('createdAt').defaultTo(knex.fn.now())
+      table.timestamp('updatedAt').nullable()
     })
   ])
 }
