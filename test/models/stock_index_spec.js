@@ -1,7 +1,11 @@
+const testHelper = require('../test_helper')
 const assert  = require('assert')
 const StockIndex = require('../../models/stock-index')
 
 describe('StockIndex', () => {
+  beforeEach(() => {
+    testHelper.clearDB()
+  })
   describe('#create', () => {
     describe('executes successfully', () => {
       it('should returns an object of id, index, value, changeNet and changeNetPercent', () => {
