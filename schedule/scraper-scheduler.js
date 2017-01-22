@@ -8,7 +8,6 @@ function start () {
     console.log('scrape..')
     ScraperService.scrape()
     .then(stockIndex => {
-      console.log(stockIndex)
       return StockIndexService.createAsync(stockIndex)
     })
     .done()
