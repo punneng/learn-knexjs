@@ -9,6 +9,7 @@ const scrape = P.coroutine(function* () {
   try {
     const [_, value, changeNet, changeNetPercent] = Const.INDEX_REGEXP.exec(rawHtml)
     return {
+      index: Const.NASDAQ,
       value: parseFloat(value),
       changeNet: parseFloat(changeNet),
       changeNetPercent: parseFloat(changeNetPercent)

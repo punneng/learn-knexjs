@@ -41,6 +41,7 @@ describe('ScraperService', () => {
       it('should return an object of value, change net and change net precentage only on nasdaq', () => {
         return ScraperService.scrape()
         .then(res => {
+          assert.equal(res.index, 'Nasdaq')
           assert.strictEqual(res.value, 5555.33)
           assert.strictEqual(res.changeNet, 15.25)
           assert.strictEqual(res.changeNetPercent, 0.28)
