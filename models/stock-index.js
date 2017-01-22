@@ -2,7 +2,7 @@ const P   = require('bluebird')
 const Joi = require('joi')
 const knex = require('../lib/knex')
 const TABLE = 'stock_indexes'
-const LIMIT = 20
+const LIMIT = 30
 
 
 // TODO: decouple to data/utils
