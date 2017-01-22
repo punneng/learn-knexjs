@@ -19,5 +19,19 @@ describe('StockIndex', () => {
         })
       })
     })
+
+    describe('executes unsuccessfully', () => {
+      it('should raise an exception with error message', () => {
+        return StockIndex.create({
+          value: 10.00,
+          changeNet: 2.00,
+          changeNetPercent: 0.10
+        })
+        .catch(e => {
+          assert.equal(e.name, 'ValidationError')
+          assert.equal(e.message, '"index" is required')
+        })
+      })
+    })
   })
 })
