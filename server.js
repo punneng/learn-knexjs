@@ -15,3 +15,6 @@ app.listen(8080, () => {
 })
 
 module.exports = app // for testing
+
+// scheduler
+ScraperScheduler.start()
