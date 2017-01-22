@@ -3,6 +3,7 @@ const request = require('request-promise')
 
 const Const  = require('../models/constant')
 
+// TODO: add uri as a parameter
 const scrape = P.coroutine(function* () {
   const rawHtml = yield request.get(Const.URI)
   try {
