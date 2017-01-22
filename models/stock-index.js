@@ -31,14 +31,14 @@ module.exports = {
     }))
 
     return knex(TABLE).insert(validatedData, [
-      'id', 'index', 'value', 'changeNet', 'changeNetPercent', 'createdAt', 'updatedAt'
+      'id', 'index', 'value', 'changeNet', 'changeNetPercent', 'createdAt'
     ])
     .then(stockIndexes => {
       return stockIndexes[0]
     })
   },
   findAsync: () => {
-    return knex.select('index', 'value', 'changeNet', 'createdAt', 'updatedAt')
+    return knex.select('index', 'value', 'changeNet', 'createdAt')
                .from(TABLE)
                .limit(LIMIT)
                .orderBy('createdAt', 'desc')
