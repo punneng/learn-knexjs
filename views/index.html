@@ -67,7 +67,7 @@
             return idx.value;
           })
           nasdaqChart.data.datasets[0].data = values;
-          nasdaqChart.data.labels = dates;
+          nasdaqChart.data.labels = dates.reverse();
           nasdaqChart.update()
         });
       }
