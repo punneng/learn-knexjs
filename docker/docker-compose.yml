@@ -1,0 +1,15 @@
+db:
+  image: postgres
+  environment:
+    - POSTGRES_PASSWORD=mysecretpassword
+  command: postgres
+server:
+  image: learn-knexjs
+  environment:
+    - PG_HOST=db
+    - PG_USER=postgres
+    - PG_PASSWORD=mysecretpassword
+  ports:
+    - "8080:8080"
+  links:
+  - db

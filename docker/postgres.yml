@@ -1,0 +1,5 @@
+db:
+  image: postgres
+  environment:
+    - POSTGRES_PASSWORD=mysecretpassword
+  command: postgres

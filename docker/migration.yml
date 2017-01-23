@@ -1,0 +1,14 @@
+db:
+  image: postgres
+  environment:
+    - POSTGRES_PASSWORD=mysecretpassword
+  command: postgres
+server_migration:
+  image: learn-knexjs
+  environment:
+    - PG_HOST=db
+    - PG_USER=postgres
+    - PG_PASSWORD=mysecretpassword
+  links:
+  - db
+  command: sh -c "sleep 5; npm run migrate:production"
