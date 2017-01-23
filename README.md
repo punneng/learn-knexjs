@@ -2,7 +2,7 @@
 
 Based on the requirements below
 
-1. Periodically scrape http://www.nasdaq.com/, parse out the index value of the Nasdaq, and store the result in the database.  
+1. Periodically(every 1 minute) scrape http://www.nasdaq.com/, parse out the index value of the Nasdaq, and store the result in the database.  
 2. Create RESTful web service to provide those data to a front end.
 
 ## Running with Docker
