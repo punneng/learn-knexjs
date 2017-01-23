@@ -18,7 +18,7 @@ const localConfig = {
       connection: {
         host: getEnv('PG_HOST')           || 'localhost',
         user: getEnv('PG_USER')           || 'dev',
-        passoword: getEnv('PG_PASSWORD')  || 'dev',
+        password: getEnv('PG_PASSWORD')   || 'dev',
         database: 'nasdaq_development',
       }
     }
@@ -30,7 +30,7 @@ const localConfig = {
       connection: {
         host: getEnv('PG_HOST')           || 'localhost',
         user: getEnv('PG_USER')           || 'dev',
-        passoword: getEnv('PG_PASSWORD')  || 'dev',
+        password: getEnv('PG_PASSWORD')   || 'dev',
         database: 'nasdaq_test',
       }
     }
@@ -42,7 +42,7 @@ const localConfig = {
       connection: {
         host: getEnv('PG_HOST'),
         user: getEnv('PG_USER'),
-        passoword: getEnv('PG_PASSWORD'),
+        password: getEnv('PG_PASSWORD'),
         database: 'nasdaq_production',
       }
     }
